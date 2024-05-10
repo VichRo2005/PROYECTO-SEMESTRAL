@@ -1,0 +1,55 @@
+* {
+    margin:0px; 
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+
+footer{
+    background-color: #bb3e00;
+    min-height: 20vh;
+}
+
+.texto-verde{
+    color: #5f8d37; 
+    text-align: center;
+}
+
+.img-comida{
+    border-radius: 3%;
+    width: 220px;
+    height: 250px;
+}
+.nav-link{  
+    font-weight: bold;    
+    color:#5f8d37;
+}
+.nav-link:hover{
+    color:#7cc939
+}
+
+.navbar{ background-color: #FFF1D7;
+}
+
+#perc70{
+    background-color: #FFF1D7;
+    min-height: 70vh;
+}
+
+#actual{ 
+background-color: #bb3e00;
+color: white;
+}
+
+#principal{ 
+background-color: #F7AD45;
+}
+
+#opciones{ 
+background-color: #F7AD45;
+}
+
+#offcanvasNavbar{ 
+background-color: #FFF1D7;
+}
