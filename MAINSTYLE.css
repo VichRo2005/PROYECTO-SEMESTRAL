@@ -4,7 +4,49 @@
     box-sizing: border-box;
 }
 
+.estilo-form{
+border: solid 2px #5f8d37;
+border-radius: 4px;
+font-size: 16px;
+width: 300px;
+height: 40px;
+text-indent: 16px;
+}
 
+.estilo-form:focus{
+    border: solid 6px rgba(95, 141, 55, 0.3);
+}
+
+.error-form{
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    -o-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background: #bb3e00;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: #FFF1D7; 
+    display: none;
+    font-size: 16px;
+    margin-top: -60px;
+    margin-left: 310px;
+    padding: 7px;
+    position: absolute;
+}
+
+.enviado-btn{
+    text-align: center;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    -o-box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background: #5f8d37;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    color: #FFF1D7; 
+    display: none;
+    padding: 7px;
+    font-size: 16px;
+    position: relative;
+}
 
 footer{
     background-color: #bb3e00;
@@ -16,7 +58,16 @@ footer{
     text-align: center;
 }
 .texto-crema{
-    color: #FFF1D7; 
+    color: #FFF1D7;
+    
+}
+.boton-opc1{
+    color: #fff1d7;
+    background: #5f8d37;
+    border-color: #bb3e00;
+    max-width: 300px;
+}
+.boton-opc1:hover{color: #fff1d7;background: rgba(95, 141, 55, 0.75);border-color: #bb3e00;
 }
 
 .img-comida{
