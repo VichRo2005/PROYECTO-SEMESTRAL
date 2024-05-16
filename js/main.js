@@ -1,4 +1,4 @@
-let page_rol = 'nulo';
+let rol = 'nulo';
 
 
 $("#formIngreso").on("submit", data => {
@@ -18,6 +18,17 @@ $("#formIngreso").on("submit", data => {
     } else{return false;} 
     
 });
+
+/*
+function Validarrol(){
+  let verifica = document.getElementById("titulo")
+  if(rol === 'admin'){
+    return rol;
+  } else{
+    window.location.replace("/main.html")
+  }
+} 
+*/
 
 const btn = document.getElementById('btnregistro');
 
