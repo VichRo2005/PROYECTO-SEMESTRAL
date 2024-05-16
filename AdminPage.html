@@ -22,7 +22,7 @@
 
   <div class="container-fluid">
 
-    <h4 ><a class="text-decoration-none texto-crema" href="main.html">" FRASE ICONICA DE LA EMPRESA "</a></h4>
+    <h4 ><a class="text-decoration-none texto-crema" href="main.html">" Tu día mejor, con un bocado "</a></h4>
 
     <!-- Botón Bstrap lateral DERECHO -->
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -69,20 +69,71 @@
 <!-- Zona para el mapa e información importante  -->
 
 <div id="perc70" style="text-align: center;">
-  <div class="justify-content-center" style="max-width: 96vw; margin: auto;"> 
+  <div class="justify-content-center" style="max-width: 96vw; padding-bottom: 30px; margin: auto;"> 
 
     <br>
     <h5 class="texto-verde">Seleccione la opcion que desea realizar: </h5>
     
-    <button class="btn boton-opc1" type="button">Administración Pedidos</button>
-    <button class="btn boton-opc1" type="button">Administración Usuarios</button>
-    <button class="btn boton-opc1" type="button">Administracion Carta</button>
-    <button class="btn boton-opc1" type="button" style="margin-left:50px;">Salir</button>
+    <button class="btn boton-opc1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false">
+      Administracion Pedidos
+     </button>
 
-  </div>
+    <button class="btn boton-opc1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false">
+     Administracion usuarios
+    </button>
+
+    <button class="btn boton-opc1" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false">
+      Administracion Carta
+     </button>
+
+    <button class="btn boton-opc1" type="button" style="margin-left:50px;">Salir</button>
+    </button></div>
+    <!-- area de codigo -->
+
+    <!-- Colapsable Pedidos -->
+<div class="collapse" id="collapse1">
+  <div class="card card-body">
+    <table id="table1"><thead><tr>
+        <th> Pedido ID </th>
+        <th> User ID</th>
+        <th> Estado </th>
+        <th> Direccion </th>
+        <th> Costo </th>
+        <th> Descripcion </th></tr>
+      </thead>
+      <tbody>
+        <tr></tr> 
+      </tbody></table></div></div>  
+      <!-- Colapsable Usuarios -->
+<div class="collapse" id="collapse2">
+  <div class="card card-body">
+    <table id="table2"><thead><tr>
+        <th> Nombre </th>
+        <th> Apellido </th>
+        <th> Correo </th>
+        <th> Telefono </th>
+        <th> User ID </th>
+        <th> Nivel </th></tr>
+      </thead>
+      <tbody id="data-out">
+        <tr><!-- se rellena con el script --></tr> 
+      </tbody></table></div></div>  
+      
+      <!-- Colapsable Carta -->
+<div class="collapse" id="collapse3">
+  <div class="card card-body">
+    <table><thead><tr>
+        <th> Carta </th>
+        <th> Opciones </th>
+        <th> Edicion </th></tr>
+      </thead>
+      <tbody>
+        <tr><!-- se rellena con el script --></tr> 
+      </tbody></table></div></div>  
+      
 </div>       
-  
 </main>
+
 
 <footer id="finpage">
 
@@ -135,9 +186,11 @@
 <!--bstrap +js-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     
-<!--jq sin usar
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
--->
+<!-- main jscript -->
+<SCRIPT src="js/main.js"> </SCRIPT> 
+<!-- data jscript -->
+<SCRIPT src="js/data.js"></SCRIPT>
     
 </body>
 

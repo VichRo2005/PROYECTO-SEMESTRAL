@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+.branding{
+    font-family: 'Lucida Handrwriting';
+}
+
 .estilo-form{
 border: solid 2px #5f8d37;
 border-radius: 4px;

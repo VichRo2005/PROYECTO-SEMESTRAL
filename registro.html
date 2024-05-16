@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--bstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!--conexión a CSS-->
-    <link rel="stylesheet" href="MAINSTYLE.css">
-    <title> Creacion </title>
+  <!--bstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!--conexión a CSS-->
+  <link rel="stylesheet" href="MAINSTYLE.css">
+  <title> Creacion </title>
     
 </head>
 <body>
-  <!-- Navbar inicio -->
-  <nav class="navbar" id="principal">
+  
+<!-- Navbar inicio -->
+<nav class="navbar" id="principal">
 
-    <div class="container-fluid">
+  <div class="container-fluid">
 
-      <h4 ><a class="text-decoration-none texto-crema" href="main.html">" FRASE ICONICA DE LA EMPRESA "</a></h4>
+    <h4 ><a class="text-decoration-none texto-crema" href="main.html">" FRASE ICONICA DE LA EMPRESA "</a></h4>
 
-    </div>
-  </nav> 
+  </div>
+</nav> 
 
-  <!-- MAIN Cuerpo página -->
-  <main> 
+<!-- MAIN Cuerpo página -->
+<main> 
 
-    <!-- Imagen central de página -->
-      <nav class="navbar">
-        <div class="container justify-content-center">
-          <img src="img/PlaceHolderLogo.png" alt="Logo" width="100" height="100" style="margin: 30px"> </a>
-        </div>
-      </nav>
+<!-- Imagen central de página -->
+<nav class="navbar">
+  <div class="container justify-content-center">
+    <img src="img/PlaceHolderLogo.png" alt="Logo" width="100" height="100" style="margin: 30px"> </a>
+  </div>
+</nav>   
 
 
-    <!-- Logins y formularios -->
-      <div id="perc70"> 
-      <h2 class="texto-verde"> CREA TU CUENTA </h2>   
-      
-    <!-- Formulario LOGIN -->
-          <div class="row d-flex justify-content-center">
-            <!-- Tres divisores que generan la caja/box para formularios -->
-              <div class="col-md-6 col-xl-4">
-                  <div class="card mb-5">
-                      <div class="card-body d-flex flex-column align-items-center">
-        <!-- Inicio Formulario -->
-                          <form id="formulario">
-                              <br>
-                              <div class="mb-3"><input type="text" id="itnombre" class="estilo-form" placeholder="Nombre"><br></div>
-                              <div id="error1" class="error-form"> Ingrese nombre </div>
-                              <div class="mb-3"><input  type="text" id="itapellido" class="estilo-form" placeholder="Apellido Paterno"><br></div>
-                              <div id="error2" class="error-form"> Ingrese apellido </div> 
-                              <div class="mb-3"><input type="text" id="itcorreo" class="estilo-form" placeholder="Correo"><br></div>
-                              <div id="error3" class="error-form"> Ingrese correo </div>
-                              <div class="mb-3"><input type="password" id="itclave" class="estilo-form" placeholder="Clave"><br></div>
-                              <div id="error4" class="error-form"> Ingrese clave </div>
-                              <div class="mb-3"><input type="text" id="ittelefono" class="estilo-form" placeholder="Telefono"><br></div>
-                              <div id="error5" class="error-form"> Ingrese telefono </div>
-
-                              <br>
-                              <div class="mb-3">
-                              <input  type="submit" id="btncrear" class="btn boton-opc1 d-block w-100" value="Crear usuario">
-                              </div>
-                          </form>
-                      </div>
+<!-- Logins y formularios -->
+<div id="perc70"> 
+  <h2 class="texto-verde"> CREA TU CUENTA </h2>   
+  
+<!-- Formulario LOGIN -->
+      <div class="row d-flex justify-content-center">
+        <!-- Tres divisores que generan la caja/box para formularios -->
+          <div class="col-md-6 col-xl-4">
+              <div class="card mb-5">
+                  <div class="card-body d-flex flex-column align-items-center">
+    <!-- Inicio Formulario -->
+                      <form id="formRegistro">
+                          <br>
+                          <div class="mb-3"><input pattern=".{3,20}" type="text" id="itnombre" class="estilo-form" placeholder="Nombre"><br></div>
+                          <div id="error1" class="error-form"> Ingrese nombre </div>
+                          <div class="mb-3"><input pattern=".{3,20}" type="text" id="itapellido" class="estilo-form" placeholder="Apellido Paterno"><br></div>
+                          <div id="error2" class="error-form"> Ingrese apellido </div> 
+                          <div class="mb-3"><input pattern=".{5,60}" type="text" id="itcorreo" class="estilo-form" placeholder="Correo"><br></div>
+                          <div id="error3" class="error-form"> Ingrese correo </div>
+                          <div class="mb-3"><input pattern=".{7,20}" type="password" id="itclave" class="estilo-form" placeholder="Clave (Min. 7 letras)"><br></div>
+                          <div id="error4" class="error-form"> Ingrese clave </div>
+                          <div class="mb-3"><input pattern=".{9,9}" type="text" id="ittelefono" class="estilo-form" placeholder="Telefono (911223344)"><br></div>
+                          <div id="error5" class="error-form"> Ingrese telefono </div>
+                         
+ 
+                          <div class="mb-3">
+                          <input  type="submit" id="btnregistro" class="btn boton-opc1 d-block w-100" value="Crear usuario">
+                          
+                          
+                          </div>
+                      </form>
                   </div>
               </div>
           </div>
-          <h4 class="texto-verde"> <a class="texto-verde" href="ingresar.html"> INICIAR SESIÓN </a> </h4> 
-          <br>
-          <h4 class="texto-verde"> <a class="texto-verde" href="main.html">  VOLVER A MENÚ </a></h4>
       </div>
-      
+      <h4 class="texto-verde"> <a class="texto-verde" href="ingresar.html"> INICIAR SESIÓN </a> </h4> 
+      <br>
+      <h4 class="texto-verde"> <a class="texto-verde" href="main.html">  VOLVER A MENÚ </a></h4>
+  </div>
+  
     
-    </main>
+</main>
 
 <footer id="finpage">
   <div class="container">
@@ -123,7 +126,7 @@
 
 <!--bstrap +js-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        
+      
 <!--jq-->
 <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
 
@@ -133,7 +136,7 @@
 
 
   $(document).ready(function(){
-    $("#btncrear").click(function(){
+    $("#btnregistro").click(function(){
 
       var nombre = $("#itnombre").val();
       var apellido = $("#itapellido").val();
@@ -141,12 +144,12 @@
       var clave = $("#itclave").val();
       var telefono = $("#ittelefono").val();
 
-        if(nombre == ""){
+        if(nombre == "" || nombre.length <= 2){
           $("#error1").fadeIn();
           return false; 
         } else { $("#error1").fadeOut();
 
-          if(apellido == ""){
+          if(apellido == "" || apellido.length <= 2){
             $("#error2").fadeIn();
           return false; 
           }else{$("#error2").fadeOut();
@@ -156,12 +159,12 @@
             return false; 
             }else {$("#error3").fadeOut();
 
-              if(clave == ""){
+              if(clave == "" || clave.length <= 6){
               $("#error4").fadeIn();
             return false; 
             }else {$("#error4").fadeOut();
 
-                if(telefono == "" || isNaN(telefono)){
+                if(telefono == "" || isNaN(telefono) || telefono.length <= 8){
                 $("#error5").fadeIn();
               return false; 
               }else {$("#error5").fadeOut();
@@ -176,5 +179,15 @@
   });
 </script>
 
+<!-- main jscript -->
+<SCRIPT src="js/main.js"> </SCRIPT>   
+
+<script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  
+<script type="text/javascript">
+  emailjs.init('XGSRyFVpmsTq_nYzy')
+</script>
+ 
 </body>
 </html>
