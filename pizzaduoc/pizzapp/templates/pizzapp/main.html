@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!--bstrap-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!--conexión a CSS-->
+  <link rel="stylesheet" href="{% static 'MAINSTYLE.css' %}">
+
+  <title> Página principal </title>
+    
+</head>
+
+<body>
+
+<!-- Navbar inicio -->
+<nav class="navbar" id="principal">
+
+  <div class="container-fluid">
+
+    <h4 ><a class="text-decoration-none branding texto-crema" href="main.html">" SIN LLAMAR, SIN ESPERAR "</a></h4>
+
+    <!-- Botón Bstrap lateral DERECHO -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"> </span> </button>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbarLabel"> NOMBRE USUARIO, </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+    <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item"> <a class="nav-link" href="carrito.html"> CARRITO </a> </li>
+          <li class="nav-item"> <a class="nav-link" href="historial.html"> HISTORIAL </a> </li>
+          <li class="nav-item"> <a class="nav-link" href="ingresar.html"> LOGIN / CONFIGURACIÓN </a> </li>
+          <li class="nav-item"> <a class="nav-link" href="registro.html"> REGISTRO </a> </li>
+      </div>
+    </div>
+  </div>
+</nav>   
+
+
+<!-- Imagen central de página -->
+<nav class="navbar">
+  <div class="container justify-content-center">
+    <img src="{% static 'img/PlaceHolderLogo.png' %}" alt="Logo" width="300" height="300"> </a>
+  </div>
+</nav>    
+   
+<!-- Opciones para navegar por LAYOUT CLIENTE-->
+<nav class="nav nav-pills nav-fill" ID="opciones">
+  <a class="nav-link" aria-current="page" href="#" id="actual"> PRINCIPAL </a>
+  <a class="nav-link" href="CARTA.html"> CARTA </a>
+  <a class="nav-link" href="PREGUNTAS.html"> PREGUNTAS</a>
+</nav>    
+
+<!--Divisor entre opciones y promociones -->
+
+<nav class="navbar">
+  <div class="container-fluid">
+  </div>
+</nav>           
+        
+<!-- MAIN Cuerpo página -->
+<main> 
+
+<!-- Carrousel para las promociones -->
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active"> <img src="{% static 'img/PROMOCIONES.png' %}" class="img-fluid w-100" alt="...">
+    </div>
+    <div class="carousel-item"> <img src="{% static 'img/PROMOCIONES2.png' %}" class="img-fluid w-100" alt="...">
+    </div>
+    <div class="carousel-item"> <img src="{% static 'img/RRSSOTRO.png' %}" class="img-fluid w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden"> Siguiente </span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden"> Anterior </span>
+  </button>
+</div>    
+        
+<!--Divisor -->
+
+<nav class="navbar">
+  <div class="container-fluid">
+  </div>
+</nav>        
+
+<!-- Zona para el mapa e información importante  -->
+
+<div id="perc70" >
+  <div class="container-fluid">
+    <p> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3332.285041466576!2d-70.67896840853338!3d-33.363623667832684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662c7025c925e0f%3A0x7f2f6a657c08d14a!2sDuoc%20UC%3A%20Sede%20Plaza%20Norte!5e0!3m2!1ses!2scl!4v1715891447809!5m2!1ses!2scl" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> </p>
+  </div>
+</div>        
+
+</main>
+    
+<footer id="finpage">
+  <div class="container">
+    <div class="container py-4 py-md-5 px-4 px-md-3 text-body-secondary">
+     <div class="row">
+       <div class="col-lg-3 mb-3">
+       <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none">
+       </a>
+       <!--espaciado-->
+        <h5 class="texto-crema branding">  Traer felicidad a las casas con un solo CLICK!</h5>
+         <ul class="list-unstyled">
+           <li class="mb-2"> PIZZAS DUOC ©2024 Todos los derechos reservados, nombre, logo y marcas ...  </li>
+         </ul>
+       </div>
+       <!--espaciado sin texto -->
+       <div class="col-6 col-lg-2 offset-lg-1 mb-3">
+         <h5 class="texto-crema branding"></h5>
+         <ul class="list-unstyled">
+           <li class="mb-2"> </li>     
+         </ul>
+       </div>
+       <!--espaciado-->
+       <div class="col-6 col-lg-2 mb-3">
+         <h5 class="texto-crema branding">Sobre nosotros </h5>
+         <ul class="list-unstyled">
+           <li class="mb-2"> Nuestra meta </li>
+           <li class="mb-2"> Politicas </li>
+           <li class="mb-2"> Terminos y condiciones </li>
+         </ul>
+       </div>
+       <!--espaciado-->
+       <div class="col-6 col-lg-2 mb-3">
+         <h5 class="texto-crema branding"> Equipo Pizzas DUOC  </h5>
+         <ul class="list-unstyled">
+           <li class="mb-2"> Únete al equipo </li>
+           <li class="mb-2"> Contacto </li>
+         </ul>
+       </div>
+       <!--espaciado-->
+       <div class="col-6 col-lg-2 mb-3">
+         <h5 class="texto-crema branding"> Nuestras redes </h5>
+         <ul class="list-unstyled">
+           <li class="mb-2"> Instagram </li>
+           <li class="mb-2"> Facebook </li>
+           <li class="mb-2"> Twitter(X) </li>
+         </ul>
+       </div>
+       </div>
+     </div>
+   </div>
+ </div>      
+</footer>
+<!--bstrap-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+<!--jq-->
+<script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+<!-- main jscript -->
+<SCRIPT src="{% static 'js/main.js'}"> </SCRIPT>   
+    
+</body>
+
+</html>
