@@ -72,7 +72,7 @@ class Pedido(models.Model):
         direccionPizzeria = "Sta. Elena de Huechuraba 1660, 8600036 Huechuraba, Región Metropolitana"
         direccionCliente = Usuario.objects.raw("SELECT direccion ||', '|| c.descripcion_comuna FROM pizzapp_usuario u INNER JOIN pizzapp_comuna c on u.comuna_id_comuna = c.id_comuna WHERE u.id_usuario = %s", [p_idUsuario])
         dirCliExact = direccionCliente + ", Region Metropolitana"
-        url= f"https://api.distancematrix.ai/maps/api/distancematrix/json?origins={direccionPizzeria}&destinations={dirCliExact}&key=i6FZLB3QCz2gUscSTGXNogkRWj7wfzK56YP84kEMsmLa1kEgig3ttCeZoiemrWu6"
+        url= f"https://api.distancematrix.ai/maps/api/distancematrix/json?origins={direccionPizzeria}&destinations={dirCliExact}&key=YOURAPIKEY"
         response = requests.get(url)
         data = response.json()
         distancia = data['rows'][0]['elements'][0]['distance']['text']	
