@@ -1,0 +1,26 @@
+{% extends "pizzapp/base.html" %}
+{% block tittle %}bienvenido{%  endblock %}
+{% block content %} 
+<div>
+{% load static %}
+    <!-- Imagen central de página -->
+      <nav class="navbar">
+        <div class="container justify-content-center">
+          <img src="{% static 'img/PlaceHolderLogo.png' %}" alt="Logo" width="300" height="300"> </a>
+        </div>
+      </nav>
+   
+    <!-- Opciones para navegar por LAYOUT CLIENTE-->
+      <nav class="nav nav-pills nav-fill" ID="opciones">
+          <a class="nav-link" href="main.html" > PRINCIPAL </a>
+          <a class="nav-link" href="CARTA.html"> CARTA </a>
+          <a class="nav-link" href="PREGUNTAS.html"> PREGUNTAS </a>
+        </nav>
+        
+<!-- MAIN Cuerpo página -->
+<main> 
+  <div id="perc70" >
+    <div class="container-fluid"> <p> Bienvenido a PizzaDuoc, @</p> </div>
+  </div>       
+</main>
+{% endblock %} 

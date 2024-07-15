@@ -1,0 +1,13 @@
+{% extends "pizzapp/base.html" %}
+{% block tittle %}logout{%  endblock %}
+
+{% block content %} 
+<div>
+{% load static %}
+
+    <h1> Has cerrado sesión </h1>
+    <p>
+        Puedes volver a iniciar sesión aquí <a href="{% url 'login'}"></a>
+    </p>
+</div>
+{% endblock %}

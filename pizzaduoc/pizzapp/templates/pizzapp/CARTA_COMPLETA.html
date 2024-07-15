@@ -1,0 +1,76 @@
+{% extends "pizzapp/base.html" %}
+{% block tittle %}cartacompleta{%  endblock %}
+{% block content %} 
+<div>
+  {% load static %}
+
+  <nav class="navbar">
+    <div class="container justify-content-center">
+      <img src="{% static 'img/PlaceHolderLogo.png' %}" alt="Logo" width="150" height="150"> </a>
+    </div>
+  </nav>
+  
+<!-- Opciones para navegar por LAYOUT CLIENTE-->
+<nav class="nav nav-pills nav-fill" ID="opciones">
+    <a class="nav-link" href="main.html"> PRINCIPAL </a>
+    <a class="nav-link" aria-current="page" href="#" id="actual"> CARTA </a>
+    <a class="nav-link" href="PREGUNTAS.html"> PREGUNTAS</a>
+  </nav>
+
+<!--Divisor -->
+
+  <nav class="navbar">
+    <div class="container-fluid">
+    </div>
+  </nav>    
+
+<!-- MAIN Cuerpo página -->
+<!-- MAIN Cuerpo página -->
+<main> 
+
+  <!-- Cuerpo principal dentro de main-->
+  <div id="perc70" > 
+    <!-- INICIO CATEGORÍAS  -->
+    <div class="justify-content-center" style="max-width: 96vw; margin: auto;"> 
+      
+      <!-- Boton hacia carta completa -->
+    
+      <div class="container d-flex align-items-center justify-content-center"> 
+        <a class="btn boton-opc1 d-block w-100" href="CARTA.html"> BEST SELLERS </a>
+      </div>
+      <!-- categoría especifica -->
+      <H2 class="texto-verde"> PRODUCTOS </H2><br>
+  
+      <div class="row mb-2">
+        {% for productos in productos %}
+        <div class="col-md-6">
+          <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                  <h3 class="mb-0">{{productos.id_producto}} " : "{{productos.desc_corta}} </h3>
+                    <p class="card-text mb-auto"> {{productos.desc_larga}} </p> <br>
+                    <div class="mb-1 text-muted text-decoration-line-through"> ${{productos.precio_real}} ORIGINAL </div>
+                    <div class="mb-1 text-dark fw-bolder"> $<span class="price">${{productos.precio_oferta}}</span> CON DESCUENTO </div>
+                    {% for idpedido in idpedido %}
+                    <a href="{% url 'add' pedido_id=idpedido.id_pedido producto_id=productos.id_producto %}">Agregar al pedido</a>
+                    <a href="{% url 'del' pedido_id=idpedido.id_pedido producto_id=productos.id_producto %}">Eliminar del pedido</a>
+                    {% endfor %}
+  
+                </div>
+            <div class="col-auto d-lg-block"> <!-- bug; estirado a media pantalla la imagen baja, tiene que ver con el atributo class d-none y variables--> 
+              <img class="img-comida" src="{% static 'img/' %}{{ productos.path_imagen }}" alt="..."> <!--implementacion de ejecucion de imagen con la base de datos, en el poblado de datos se puso cualquier el path correcto, hay que corregirlo en el poblado de datos-->
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+  
+      </div>
+      <!--fin categoría especifica-->
+  
+      <!-- categoría especifica -->
+  
+    </div> <!-- FIN CATEGORIAS -->
+  </div> <!-- Fin DIV PERC70-->
+  
+  </main>   
+    
+{% endblock %} 

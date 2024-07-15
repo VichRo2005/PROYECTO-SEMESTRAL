@@ -55,4 +55,5 @@ INSERT INTO comuna (id_comuna,descripcion_comuna) VALUES
 	 (50,'Isla de Maipo');
 INSERT INTO comuna (id_comuna,descripcion_comuna) VALUES
 	 (51,'Padre Hurtado'),
-	 (52,'Peñaflor');
+	 (52,'Peñaflor'),
+	 (999, 'Default');

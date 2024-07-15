@@ -111,3 +111,30 @@ background-color: #F7AD45;
 #offcanvasNavbar{ 
 background-color: #FFF1D7;
 }
+
+.container_faq {
+    text-align: center;
+    background-color: #FFF1D7;  
+    list-style-type: none;
+}
+
+.question {
+    color: #5f8d37;  
+    font-size: 24px
+}
+
+.answer {
+    color: #bb3e00;  
+    font-size: 20px
+}
+
+.container_historial {
+    display: flex;
+    flex-direction: row;
+  }
+
+.listapedidos {
+    margin-right: 1px;
+    padding: 5px;
+    border: 2px solid #5f8d37;
+}

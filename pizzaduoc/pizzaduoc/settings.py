@@ -27,19 +27,21 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-STATICFILES_DIRS=['C:\misProyectosDuoc\pizzaduoc\pizzapp\web\static']
+STATICFILES_DIRS=['C:\misProyectos\pizzaduoc\pizzapp\web\static']
+
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'pizzapp.apps.PizzappConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pizzapp',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [
@@ -57,7 +59,7 @@ ROOT_URLCONF = 'pizzaduoc.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR, "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -69,6 +71,8 @@ TEMPLATES = [
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'pizzaduoc.wsgi.application'
 
@@ -124,3 +128,10 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'bienvenido'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout_user'
+LOGOUT_REDIRECT_URL = 'main'
+
+
